@@ -151,6 +151,12 @@ func (s *Searcher) checkUnaryExpr(n *ast.UnaryExpr, stack []ast.Node) (*ast.Iden
 		return nil, token.NoPos, true
 	}
 
+	// Selector of loop var. If the loop var is a pointer `.` will deref it so there's no issue.
+	// TODO: This needs to detect if the loop var is a pointer, otherwise it suppresses when it shouldn't
+	if _, isSelect := n.X.(*ast.SelectorExpr); isSelect {
+		return nil, token.NoPos, true
+	}
+
 	return id, insert, false
 }
 
