@@ -1,6 +1,8 @@
 # looppointer
 
-An analyzer that finds pointers for loop variables.
+An analyzer that finds pointers for loop variables + references to loop variables in function literals.
+
+This is a fork of https://github.com/kyoh86/looppointer with support for detection within function literals added.
 
 [![PkgGoDev](https://pkg.go.dev/badge/kyoh86/looppointer)](https://pkg.go.dev/kyoh86/looppointer)
 [![Go Report Card](https://goreportcard.com/badge/github.com/kyoh86/looppointer)](https://goreportcard.com/report/github.com/kyoh86/looppointer)
@@ -119,25 +121,13 @@ func TestSample(t *testing.T) {
 go:
 
 ```console
-$ go get github.com/kyoh86/looppointer/cmd/looppointer
-```
-
-[homebrew](https://brew.sh/):
-
-```console
-$ brew install kyoh86/tap/looppointer
-```
-
-[gordon](https://github.com/kyoh86/gordon):
-
-```console
-$ gordon install kyoh86/looppointer
+$ go install github.com/kyoh86/looppointer/cmd/looppointer
 ```
 
 ## Usage
 
 ```
-looppointer [-flag] [package]
+looppointer [-flag] [full package path]
 ```
 
 ### Flags
