@@ -121,7 +121,7 @@ func TestSample(t *testing.T) {
 go:
 
 ```console
-$ go install github.com/kyoh86/looppointer/cmd/looppointer
+$ go install github.com/sublime-security/looppointer/cmd/looppointer
 ```
 
 ## Usage
