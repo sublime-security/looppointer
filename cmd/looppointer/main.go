@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/kyoh86/looppointer"
+	"github.com/sublime-security/looppointer"
 	"golang.org/x/tools/go/analysis/singlechecker"
 )
 
