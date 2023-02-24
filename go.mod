@@ -1,6 +1,6 @@
 module github.com/sublime-security/looppointer
 
-go 1.19
+go 1.20
 
 require (
 	github.com/kyoh86/nolint v0.0.1
