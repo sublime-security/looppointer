@@ -1,4 +1,12 @@
-# looppointer
+# looppointer (deprecated)
+
+## Obsolete with Go 1.22+
+
+⚠️ This linter is no longer needed since Go 1.22, which changed the loop var semantics to use per-iteration scope instead of per-loop scope.
+
+**https://go.dev/blog/loopvar-preview**
+
+## Original info
 
 An analyzer that finds pointers for loop variables + references to loop variables in function literals.
 
